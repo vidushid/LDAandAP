@@ -22,57 +22,6 @@ This project implements and compares multiple machine learning approaches to pre
 - **Features**: CpG methylation sites
 - **Target**: Chronological age
 
-## Project Structure
-
-```
-dna-age-prediction/
-├── README.md                 # Project documentation
-├── requirements.txt          # Python dependencies
-├── setup.py                  # Package setup
-├── .gitignore               # Git ignore rules
-│
-├── src/
-│   ├── __init__.py
-│   ├── data/
-│   │   ├── __init__.py
-│   │   ├── loader.py        # Data loading utilities
-│   │   └── preprocessor.py  # Data preprocessing
-│   ├── features/
-│   │   ├── __init__.py
-│   │   └── selector.py      # Feature selection
-│   ├── models/
-│   │   ├── __init__.py
-│   │   ├── elasticnet.py    # ElasticNet model
-│   │   └── random_forest.py # Random Forest model
-│   ├── evaluation/
-│   │   ├── __init__.py
-│   │   └── metrics.py       # Evaluation metrics
-│   └── utils/
-│       ├── __init__.py
-│       └── helpers.py       # Utility functions
-│
-├── notebooks/
-│   ├── 01_eda.ipynb         # Exploratory data analysis
-│   ├── 02_preprocessing.ipynb
-│   ├── 03_modeling.ipynb
-│   └── 04_results.ipynb
-│
-├── tests/
-│   ├── __init__.py
-│   ├── test_loader.py       # Data loader tests
-│   ├── test_preprocessor.py # Preprocessor tests
-│   ├── test_models.py       # Model tests
-│   └── test_metrics.py      # Metrics tests
-│
-├── config/
-│   └── config.yaml          # Configuration parameters
-│
-└── data/
-    ├── raw/                 # Raw data (not in repo)
-    ├── processed/           # Processed data
-    └── results/             # Model results
-```
-
 ## Installation
 
 ### Prerequisites
@@ -206,26 +155,3 @@ Molecular Cell, 49(2), 359-367.
 1. Hannum, G., et al. (2013). Genome-wide methylation profiles reveal quantitative views on mammalian aging. *Molecular Cell*
 2. Horvath, S. (2013). DNA methylation age of human tissues and cell types. *Genome Biology*
 3. Scikit-learn: Machine Learning in Python. Pedregosa et al., JMLR 12:2825-2830, 2011
-
-## License
-
-MIT License - See LICENSE file for details
-
-## Authors
-
-[Your Name/Team]
-
-## Acknowledgments
-
-- Dataset from Gene Expression Omnibus (GEO)
-- Built with scikit-learn and pandas
-- Inspired by epigenetic aging research
-
-## Contact
-
-For questions or suggestions, please open an issue on GitHub.
-
----
-
-**Status**: Active development
-**Last Updated**: 2026
