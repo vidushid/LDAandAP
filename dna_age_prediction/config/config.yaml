@@ -1,0 +1,53 @@
+data:
+  dataset_name: GSE40279
+  dataset_source: "Gene Expression Omnibus (GEO)"
+  sample_type: "DNA methylation (Illumina 450k)"
+  data_path: "data/raw/GSE40279"
+  processed_path: "data/processed"
+
+preprocessing:
+  missing_value_threshold: 0.1  # Remove features with >10% missing values
+  min_variance: 0.01  # Minimum variance filter
+  standardize: true
+  normalization_method: "quantile"  # Options: quantile, zscore, minmax
+
+feature_selection:
+  method: "variance"  # Options: variance, correlation, mutual_info
+  n_features: 1000  # Number of top features to select
+  correlation_threshold: 0.95  # Remove highly correlated features
+
+models:
+  elasticnet:
+    alpha: 1.0
+    l1_ratio: 0.5
+    fit_intercept: true
+    normalize: false
+    max_iter: 1000
+    tol: 0.0001
+    random_state: 42
+    
+  random_forest:
+    n_estimators: 100
+    max_depth: 20
+    min_samples_split: 5
+    min_samples_leaf: 2
+    max_features: "sqrt"
+    random_state: 42
+    n_jobs: -1
+    verbose: 0
+
+evaluation:
+  test_size: 0.2
+  cv_folds: 5
+  random_state: 42
+  metrics:
+    - "r2"
+    - "mae"
+    - "rmse"
+    - "correlation"
+
+output:
+  save_models: true
+  model_path: "data/results/models"
+  plot_path: "data/results/plots"
+  results_path: "data/results"
