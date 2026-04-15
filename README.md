@@ -92,35 +92,6 @@ pytest tests/ --cov=src
 pytest tests/test_models.py -v
 ```
 
-## Model Comparison
-
-### ElasticNet
-- **Advantage**: Interpretable, handles multicollinearity well
-- **Parameters**: Alpha, L1 ratio
-- **Use case**: Feature importance analysis
-
-### Random Forest
-- **Advantage**: Captures non-linear relationships
-- **Parameters**: N estimators, max depth
-- **Use case**: Best predictive performance
-
-## Results
-
-Model performance on test set:
-
-| Model | R² | MAE | RMSE |
-|-------|----|----|------|
-| ElasticNet | 0.XX | X.XX | X.XX |
-| Random Forest | 0.XX | X.XX | X.XX |
-
-*Results to be populated after model training*
-
-## Key Findings
-
-- Top age-associated CpG sites identified
-- Biological relevance of selected markers
-- Cross-validation performance: [to be documented]
-
 ## Dependencies
 
 - pandas >= 1.3.0
@@ -131,24 +102,6 @@ Model performance on test set:
 - seaborn >= 0.11.0
 - pyyaml >= 5.4.0
 
-## Contributing
-
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Make changes and test thoroughly
-4. Commit with clear messages
-5. Push and create a Pull Request
-
-## Citation
-
-If you use this code in your research, please cite:
-
-```
-Hannum, G., Guinney, J., Zhao, L., et al. (2013). 
-Genome-wide methylation profiles reveal quantitative views on mammalian aging. 
-Molecular Cell, 49(2), 359-367.
-```
 
 ## References
 
